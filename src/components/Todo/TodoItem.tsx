@@ -9,8 +9,6 @@ const TodoItem: React.FC<TodoListRender> = ({
    index,
    deleteItem,
    updateItem,
-   items,
-   setItems,
 }) => {
    const [isCompleted, setIsCompleted] = useState(false);
 
@@ -41,8 +39,8 @@ const TodoItem: React.FC<TodoListRender> = ({
                      completed ? 'line-through' : ''
                   } flex justify-between w-full h-[52px] md:h-[69px] px-[19px] text-[#cacde8] dark:text-[#484b6a] border-b border-solid border-[#393a4c] dark:border-[#d2d3db] transition-all`}
                >
-                  <button
-                     className="flex items-center justify-center z-10 group"
+                  <div
+                     className="cursor-pointer flex items-center justify-center z-10 group"
                      onClick={updateItemStatus(id)}
                      aria-label="check button"
                   >
@@ -66,7 +64,7 @@ const TodoItem: React.FC<TodoListRender> = ({
                      >
                         {todo}
                      </span>
-                  </button>
+                  </div>
 
                   <button onClick={() => deleteItem(id)}>
                      <svg
