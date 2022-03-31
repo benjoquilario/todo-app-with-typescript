@@ -60,9 +60,9 @@ const Todo: React.FC = () => {
 
    return (
       <div className="w-full max-w-[540px]">
-         <h1 className="sr-only">Todo Application</h1>
          <Header />
          <main>
+            <h1 className="sr-only">Todo Application</h1>
             <Form onAddTodo={onAddTodo} />
             <TodoList
                items={items}
