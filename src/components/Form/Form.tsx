@@ -30,16 +30,17 @@ const Form: React.FC<NewTodoProps> = ({ onAddTodo }) => {
          <div className="relative w-full h-[47px] md:h-[64px] rounded">
             <button
                type="submit"
+               aria-label="submit todo items"
                className="absolute top-[12px] md:top-[18px] left-[22px] border border-solid border-[#393a4c] dark:border-[#d2d3db] h-[22px] w-[22px] rounded-full"
             ></button>
-            <label className="sr-only" id="todo">
+            <label className="sr-only" htmlFor="todos">
                Create a new todo
             </label>
             <input
                className="pl-[52px] w-full h-full bg-[#25273c] dark:bg-[#fff] text-[#cacde8] dark:text-[#484b6a] text-xs md:text-base transition-all"
                placeholder="Create a new todo..."
                aria-label="Create a new todo"
-               id="todo"
+               id="todos"
                type="text"
                ref={inputTodoText}
             />
