@@ -19,8 +19,6 @@ export interface TodoListRender {
    index: number;
    updateItem: (id: number) => void;
    deleteItem: (id: number) => void;
-   items: NewTodosState[];
-   setItems: (data: any) => void;
 }
 
 export type NewTodoProps = {
