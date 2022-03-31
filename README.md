@@ -1,46 +1,110 @@
-# Getting Started with Create React App
+# Frontend Mentor - Todo app solution
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a solution to the [Todo app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Available Scripts
+## Table of contents
 
-In the project directory, you can run:
+-  [Overview](#overview)
+   -  [The challenge](#the-challenge)
+   -  [Screenshot](#screenshot)
+   -  [Links](#links)
+-  [My process](#my-process)
+   -  [Built with](#built-with)
+   -  [What I learned](#what-i-learned)
+   -  [Continued development](#continued-development)
+-  [Author](#author)
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### The challenge
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Users should be able to:
 
-### `npm test`
+-  View the optimal layout for the app depending on their device's screen size
+-  See hover states for all interactive elements on the page
+-  Add new todos to the list
+-  Mark todos as complete
+-  Delete todos from the list
+-  Filter by all/active/complete todos
+-  Clear all completed todos
+-  Toggle light and dark mode
+-  **Bonus**: Drag and drop to reorder items on the list
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Screenshot
 
-### `npm run build`
+![](./screenshots.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Links
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+-  Live Site URL: [Add live site URL here](https://todoapp-benjo.netlify.app/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## My process
 
-### `npm run eject`
+Hello there! Thanks for checking out this project of mine.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+This is my 26th frontendmentor challenge and my 6th intermediate frontend project.
+The project was made using Reactjs with TypeScript and tailwindCSS for designing the app, I just started to learn TypeScript that's why I want to build project written with typescripts. I really thought that it was easy but coding with typescript is pain in the \*ss, especially if you're beginner like me, It not easy to me when writing in the props, because there's some props I don't want to used but typescript basically forced us to use it😅.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+but I also inlove using typescript, it was just easier to debug because most of the problems you encounter in IDE or in compilation time. You don't need to console.log to check what the problems is. I also encountered that I don't know how to write and It basically forced me to use the **any** keyword😅. There still many to learn about typescript and I believe it will improve in no time.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Some features on the page that I added:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+-  One of the best features of this one is the drag and drop, if you want to change the todo that you want to finish first just drag and drop the items.
+-  **Local Storage** in the browser, I stored the data in local storage so that it will not fade the items after the browser refresh.
 
-## Learn More
+Overall, I am very happy with how the application turned out. I am sure it can be improved, but it was a great learning experience that I intend to build upon.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Any additional feedback or a criticism will be appreciated!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Built with
+
+-  JSX
+-  CSS custom properties
+-  Flexbox
+-  TailwindCSS
+-  React-beatiful-dnd
+-  [React](https://reactjs.org/) - JS library
+-  [TailwindCSS](https://styled-components.com/) - For styles
+
+### What I learned
+
+#### TypeScript
+
+TypeScript is a superset of JavaScript which primarily provides optional static typing, classes and interfaces. One of the big benefits is to enable IDEs to provide a richer environment for spotting common errors as you type the code.
+It looks something like this
+
+```
+export interface TodoListRender {
+   id: number;
+   todo: string;
+   completed: boolean;
+   index: number;
+   updateItem: (id: number) => void;
+   deleteItem: (id: number) => void;
+}
+```
+
+I'm having fun on using this typescript because what interface objects looks like then the components function need to also like the interface above.
+
+```
+const TodoItem: React.FC<TodoListRender> = ({
+   id,
+   todo,
+   completed,
+   index,
+   deleteItem,
+   updateItem,
+})
+```
+
+### Continued development
+
+After finishing this one, I realize that I need to learn more about tailwindcss, typescript and also reactjs especially in react hooks useEffect.
+
+I will finish every frontendmentor challenge as much I take.
+
+## Author
+
+-  Website - [Benjo Quilario](https://benjoquilario.me/)
+-  Frontend Mentor - [@benjoquilario](https://www.frontendmentor.io/profile/benjoquilario)
+-  Twitter - [@iam_benjo](https://twitter.com/iam_benjo)
