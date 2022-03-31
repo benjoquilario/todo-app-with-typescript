@@ -8,7 +8,6 @@ interface TodoListRenderItem {
    updateItem: (id: number) => void;
    deleteItem: (id: number) => void;
    updateLocalItem: (data: any) => void;
-   setItems: (data: []) => void;
    filter: string;
 }
 
@@ -17,7 +16,6 @@ const TodoList: React.FC<TodoListRenderItem> = ({
    deleteItem,
    updateItem,
    updateLocalItem,
-   setItems,
    filter,
 }) => {
    const rendered = (
@@ -35,8 +33,6 @@ const TodoList: React.FC<TodoListRenderItem> = ({
             completed={completed}
             deleteItem={deleteItem}
             updateItem={updateItem}
-            items={items}
-            setItems={setItems}
          />
       );
    };
