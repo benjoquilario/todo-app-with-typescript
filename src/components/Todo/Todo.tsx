@@ -68,7 +68,6 @@ const Todo: React.FC = () => {
                items={items}
                deleteItem={deletedItem}
                updateItem={updateItem}
-               setItems={setItems}
                filter={filter}
                updateLocalItem={updateLocalItem}
             />
